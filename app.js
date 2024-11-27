@@ -3,7 +3,7 @@ var totalTarjetas = grupoTarjetas.concat(grupoTarjetas);
 
 var contadorAciertos = 0;
 var contadorErrores = 0;
-var tiempoRestante = 60; // Tiempo total en segundos para el juego
+var tiempoRestante = 30; // Tiempo total en segundos para el juego
 var temporizador;
 
 reparteTarjetas();
