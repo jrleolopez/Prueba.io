@@ -122,7 +122,7 @@ function iniciarTemporizador() {
       document.querySelector("#temporizador").innerHTML = tiempoRestante + "s";
     } else {
       clearInterval(temporizador); // Detiene el temporizador
-      alert("¡Se acabó el tiempo!"); // Alerta cuando el tiempo se acabe
+      alert("¡Perdiste idiota!"); // Alerta cuando el tiempo se acabe
       // Reiniciar el juego
       resetearJuego();
     }
@@ -133,7 +133,7 @@ function resetearJuego() {
   // Reinicia los contadores y el temporizador
   contadorAciertos = 0;
   contadorErrores = 0;
-  tiempoRestante = 60;
+  tiempoRestante = 120;
 
   actualizaContadores();
   reparteTarjetas();
