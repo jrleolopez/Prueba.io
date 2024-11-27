@@ -133,7 +133,7 @@ function resetearJuego() {
   // Reinicia los contadores y el temporizador
   contadorAciertos = 0;
   contadorErrores = 0;
-  tiempoRestante = 120;
+  tiempoRestante = 30;
 
   actualizaContadores();
   reparteTarjetas();
