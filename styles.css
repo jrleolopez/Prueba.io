@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background: #e1e1e1;
+    font-family: "Oswald", sans-serif;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+canvas { background: #eee; }
