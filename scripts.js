@@ -29,7 +29,19 @@ for(c=0; c<brickColumnCount; c++) {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-document.addEventListener("mousemove", mouseMoveHandler, false);
+
+document.getElementById("leftButton").addEventListener("mousedown", function() {
+    leftPressed = true;
+});
+document.getElementById("leftButton").addEventListener("mouseup", function() {
+    leftPressed = false;
+});
+document.getElementById("rightButton").addEventListener("mousedown", function() {
+    rightPressed = true;
+});
+document.getElementById("rightButton").addEventListener("mouseup", function() {
+    rightPressed = false;
+});
 
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
@@ -39,6 +51,7 @@ function keyDownHandler(e) {
         leftPressed = true;
     }
 }
+
 function keyUpHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = false;
@@ -47,12 +60,11 @@ function keyUpHandler(e) {
         leftPressed = false;
     }
 }
-function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
-    }
-}
+
+// Variables para las teclas presionadas
+var rightPressed = false;
+var leftPressed = false;
+
 function collisionDetection() {
     for(c=0; c<brickColumnCount; c++) {
         for(r=0; r<brickRowCount; r++) {

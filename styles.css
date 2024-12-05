@@ -13,4 +13,10 @@ body{
     min-height: 100vh;
 }
 
+.botones {
+display:flex;
+justify-content: space-around;
+padding-top: 2em;
+}
+
 canvas { background: #eee; }
